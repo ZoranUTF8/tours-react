@@ -1,0 +1,16 @@
+:root {
+  --main-color: #4dc9ea;
+  --secondary-color: #3999b3;
+  --plain-white: #fff;
+  --plain-black: #000;
+}
+
+/* GENERAL */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.fullPage {
+  height: 80vh;
+}

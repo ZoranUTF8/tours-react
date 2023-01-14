@@ -1,0 +1,19 @@
+.navbar {
+  background-color: var(--main-color);
+  font-size: 1.2rem;
+}
+
+.navbar-title {
+  display: inline;
+}
+
+.navbar-text {
+  font-size: 1.5rem;
+  color: var(--plain-white);
+}
+
+.navbar-navlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
