@@ -7,20 +7,20 @@ import "./landing.css";
 
 const Landing = () => {
   return (
-    <Container fluid={true} className="text-center landing-main-container">
+    <Container fluid className="text-center landing-main-container">
       <Row>
         <Col md="12" className="p-0">
           <Image
-            fluid={true}
+            fluid
             src={Hero}
             alt="hero image"
             className="p-0 landing-hero_image"
           />
         </Col>
-        <Col md="12" className="mt-5 mb-5">
+        <Col md="12" className="pt-5 pb-5">
           <OurServices />
         </Col>
-        <Col md="12">
+        <Col md="12" className="pt-5 pb-5">
           <FeaturedTours />
         </Col>
       </Row>

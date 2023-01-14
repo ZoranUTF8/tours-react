@@ -20,7 +20,15 @@ export default function useGetFeaturedTours() {
       const response = await axios(
         "https://trips-api.onrender.com/api/v1/tours/top-5-tours"
       );
-      setTourTours({ ...response });
+
+     
+      const {
+        data: {
+          data: { docs: tours },
+        },
+      } = response;
+
+      setTourTours(tours);
       setIsLoading(false);
     } catch (err) {
       setError(err);

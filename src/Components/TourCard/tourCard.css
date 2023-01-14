@@ -1,0 +1,36 @@
+.tour-card:hover {
+  box-shadow: 0px 0px 24px 2px rgba(57, 153, 179, 0.75);
+  -webkit-box-shadow: 0px 0px 24px 2px rgba(57, 153, 179, 0.75);
+  -moz-box-shadow: 0px 0px 24px 2px rgba(57, 153, 179, 0.75);
+}
+
+.card_details_button {
+}
+
+.tour-card_tour_type {
+  text-transform: uppercase;
+}
+
+.tour-card_option {
+  padding: 5px;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.tour-card-button {
+  border: none;
+  background-color: var(--main-color);
+}
+.tour-card-button:hover {
+  border: none;
+  background-color: var(--secondary-color);
+}
+
+.tour-card_price span {
+  display: inline;
+  color: rgb(4, 209, 4);
+  font-size: 1.5rem;
+}

@@ -1,6 +1,7 @@
 .navbar {
   background-color: var(--main-color);
   font-size: 1.2rem;
+  position: sticky;
 }
 
 .navbar-title {

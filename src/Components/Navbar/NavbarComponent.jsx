@@ -15,7 +15,7 @@ const NavbarComponent = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} className="navbar" expand={expand}>
+        <Navbar key={expand} className="navbar sticky-top shadow-md" expand={expand}>
           <Container>
             <Navbar.Brand href="#home">
               {" "}
