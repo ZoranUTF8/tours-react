@@ -1,8 +1,12 @@
 import { OurServices } from "../index";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { FeaturedTours } from "../index";
-
-import Hero from "../../assets/img/hero.jpg";
+import {
+  FeaturedTours,
+  LandingVideo,
+  AboutUs,
+  Testimonials,
+  Hero,
+} from "../index";
 import "./landing.css";
 
 const Landing = () => {
@@ -10,18 +14,22 @@ const Landing = () => {
     <Container fluid className="text-center landing-main-container">
       <Row>
         <Col md="12" className="p-0">
-          <Image
-            fluid
-            src={Hero}
-            alt="hero image"
-            className="p-0 landing-hero_image"
-          />
+          <Hero />
         </Col>
         <Col md="12" className="pt-5 pb-5">
           <OurServices />
         </Col>
-        <Col md="12" className="pt-5 pb-5">
+        <Col md="12" className="pb-5">
           <FeaturedTours />
+        </Col>
+        <Col md="12" className="pt-5 p-0">
+          <LandingVideo />
+        </Col>
+        <Col md="12" className="pt-5 pb-5">
+          <AboutUs />
+        </Col>
+        <Col md="12" className="pt-5 pb-5 p-0">
+          <Testimonials />
         </Col>
       </Row>
     </Container>

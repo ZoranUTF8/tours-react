@@ -1,0 +1,18 @@
+.testimonials-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/img/testimonials/testimonials-bg.jpg");
+  background-size: cover;
+  color: var(--plain-white);
+}
+
+.testimonials-container_ceoImage {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  /* border-radius: 50px; */
+}

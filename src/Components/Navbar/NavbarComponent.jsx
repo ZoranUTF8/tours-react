@@ -15,9 +15,9 @@ const NavbarComponent = () => {
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} className="navbar sticky-top shadow-md" expand={expand}>
+        <Navbar key={expand} variant="dark" className="navbar sticky-top shadow-md" expand={expand}>
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand href="/landing">
               {" "}
               <Image
                 src={Logo}
@@ -36,7 +36,7 @@ const NavbarComponent = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  GoTrip
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>

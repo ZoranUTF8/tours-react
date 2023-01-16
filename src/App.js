@@ -1,7 +1,8 @@
 import "./App.css";
 import { NavbarComponent, Footer } from "./Components";
 import { Routes, Route } from "react-router-dom";
-import { Error, Landing, Register,FeaturedTours } from "./Pages";
+import { Error, Landing } from "./Pages";
+import { Register } from "./Components";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       </Routes>
 
       {/* FOOTER */}
+
       <Footer />
     </div>
   );

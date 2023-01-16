@@ -9,7 +9,6 @@ const FeaturedTours = () => {
   if (isLoading) {
     return <Loading />;
   }
-  console.log(topTours);
   return (
     <div className="section-tittle text-center">
       <span>FEATURED TOURS</span>

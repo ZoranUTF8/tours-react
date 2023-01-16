@@ -16,7 +16,7 @@ const Error = () => {
         >
           <h3>Ohh! Page not found.</h3>
           <p>We can't find the page you are requesting for.</p>
-          <Link to="/landing" className="btn btn-info shadow">
+          <Link to="/landing" className="btn btn-info shadow mt-5">
             Back Home
           </Link>
         </Col>

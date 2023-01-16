@@ -72,7 +72,7 @@ const TourCard = ({
         </p>
       </Card.Body>
       <Card.Footer className="text-muted  d-flex justify-content-between">
-        <p className="tour-card_price">
+        <p className="tour-card_price ">
           <GiPriceTag /> <span>{price}</span> $ per person
         </p>
 

@@ -28,9 +28,15 @@ p {
   border: none;
   background-color: var(--secondary-color);
 }
-
+.tour-card_price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 .tour-card_price span {
   display: inline;
   color: rgb(4, 209, 4);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }

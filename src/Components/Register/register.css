@@ -1,0 +1,35 @@
+.register-container {
+  margin: auto;
+}
+.register-container_left h3 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.register-container_left li {
+  margin-bottom: 20px;
+}
+
+.register-container_left span {
+  font-family: Satisfy;
+  color: var(--text-yellow);
+}
+
+.register-form_toggle_member_btn {
+  text-decoration: none;
+}
+
+.register-form_login_btn {
+  background-color: var(--main-color);
+  border: none;
+}
+.register-form_login_btn:hover {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 767px) {
+  .register-container_right {
+    margin-bottom: 20px;
+  }
+}
