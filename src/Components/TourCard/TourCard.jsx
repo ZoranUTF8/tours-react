@@ -1,4 +1,4 @@
-import { Card, Button, Image, ListGroup } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { ImLocation } from "react-icons/im";
 import { AiFillFlag } from "react-icons/ai";
@@ -25,12 +25,13 @@ const TourCard = ({
   maxGroupSize,
   startDates,
   startLocation,
+  _id,
 }) => {
   const tourStartDate = new Date(startDates[0]);
 
   return (
     <Card style={{ width: "18rem" }} className="m-3 tour-card">
-      <Card.Img variant="top" src={imageCover} />
+      <Card.Img variant="top" src={imageCover} className="card-image" />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{summary}</Card.Text>
@@ -72,15 +73,13 @@ const TourCard = ({
         </p>
       </Card.Body>
       <Card.Footer className="text-muted  d-flex justify-content-between">
-        <p className="tour-card_price ">
+        <p className="tour-card_price">
           <GiPriceTag /> <span>{price}</span> $ per person
         </p>
 
-        <Button className="tour-card-button">
-          <Link to={`/tours/${slug}`} className="text-light">
-            Details
-          </Link>
-        </Button>
+        <Link to={`/tour/${slug}`} className="card_details_button">
+          Details
+        </Link>
       </Card.Footer>
     </Card>
   );

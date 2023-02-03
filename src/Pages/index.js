@@ -6,6 +6,9 @@ import LandingVideo from "./LandingVideo/LandingVideo";
 import AboutUs from "./AboutUs/AboutUs";
 import Testimonials from "./Testimonials/Testimonials";
 import Hero from "./Hero/Hero";
+import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
+import AboutUsPage from "./AboutUs/AboutUsPage";
+import ContactUs from "./ContactUs/ContactUs";
 
 export {
   Error,
@@ -16,4 +19,8 @@ export {
   AboutUs,
   Testimonials,
   Hero,
+  ProtectedRoute,
+  AboutUsPage,
+  ContactUs
 };
+

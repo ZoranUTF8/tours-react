@@ -1,5 +1,5 @@
 import { OurServices } from "../index";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import {
   FeaturedTours,
   LandingVideo,
@@ -11,22 +11,22 @@ import "./landing.css";
 
 const Landing = () => {
   return (
-    <Container fluid className="text-center landing-main-container">
+    <Container fluid className="text-center">
       <Row>
         <Col md="12" className="p-0">
-          <Hero />
+          <LandingVideo />
         </Col>
         <Col md="12" className="pt-5 pb-5">
-          <OurServices />
+          <AboutUs />
         </Col>
         <Col md="12" className="pb-5">
           <FeaturedTours />
         </Col>
         <Col md="12" className="pt-5 p-0">
-          <LandingVideo />
+          <Hero/>
         </Col>
         <Col md="12" className="pt-5 pb-5">
-          <AboutUs />
+        <OurServices />
         </Col>
         <Col md="12" className="pt-5 pb-5 p-0">
           <Testimonials />

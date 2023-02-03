@@ -7,14 +7,74 @@
 .navbar-title {
   display: inline;
 }
+.nav_link {
+  color: var(--text-yellow) !important;
+}
 
+button .navbar-toggler .collapsed {
+  background-color: red !important;
+  color: var(--text-yellow) !important;
+}
+.navbar-toggler {
+  background-color: var(--text-yellow) !important;
+  border-color: var(--text-yellow) !important;
+}
 .navbar-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: "Satisfy", cursive;
+  color: var(--text-yellow);
+}
+
+.main-nav {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+Nav a:hover {
+  color: var(--secondary-color) !important;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  /* object-fit: cover; */
+}
+
+.activeLink {
+  margin-bottom: 5px;
+  color: var(--text-yellow);
+}
+.notActive {
   color: var(--plain-white);
 }
 
-.navbar-navlink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Navbar Dropdown */
+
+.navbarOffCanvas {
+  background-color: var(--main-color);
+  font-size: 1.2rem;
+}
+.dropdownNav {
+}
+
+.dropdownNav a {
+  color: var(--plain-white);
+}
+.dropdownNav a:hover {
+  color: var(--text-yellow) !important;
+  text-decoration: none !important;
+}
+.dropdown-menu.show {
+  background-color: var(--main-color);
+  border: 1px solid var(--plain-white);
+}
+.navbarOffCanvas a:hover {
+  color: var(--text-yellow);
+  background-color: transparent;
+}
+
+.navbar-nav .show > .nav-link {
+  color: var(--plain-white);
 }

@@ -11,8 +11,8 @@ const FeaturedTours = () => {
   }
   return (
     <div className="section-tittle text-center">
-      <span>FEATURED TOURS</span>
-      <h2>Top 6 Favourite Places</h2>
+      <span >FEATURED TOURS</span>
+      <h2 className="text-muted">Top 6 Favourite Places</h2>
       <div className="d-flex justify-content-center flex-wrap">
         {/* FEATURED TOURS */}
         {topTours.map((tour) => {

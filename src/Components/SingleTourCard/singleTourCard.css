@@ -1,0 +1,104 @@
+/* top left */
+.single-tour-page-header {
+  min-height: 600px;
+  background-image: linear-gradient(176deg, #8dcbe6 70%, #fff calc(70% + 2px));
+  color: var(--plain-white);
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.45);
+}
+.single-tour-page-reviews {
+  background: linear-gradient(20deg, #8dcbe6 0 50%, #fff 50% 100%);
+  background-repeat: no-repeat;
+}
+
+.single-tour-page_title {
+  color: var(--secondary-color) !important;
+  font-size: 4rem;
+}
+.single-tour-page_summary {
+  font-size: 1.5rem;
+}
+.single-tour-page_info {
+  font-size: 2rem;
+}
+
+.single-tour-page_info_container {
+  font-size: 1.5rem;
+}
+.single-tour-page_info_container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* top right */
+.single-tour-page_top_right-image {
+  max-width: 80% !important;
+  min-height: 100% !important;
+  border-radius: 0px 200px 0px 200px;
+  -webkit-border-radius: 0px 200px 0px 200px;
+  -moz-border-radius: 0px 200px 0px 200px;
+}
+
+/* single-tour-page_about_&_facts */
+.single-tour-page_about_and_facts_container {
+  min-height: 500px;
+}
+.single-tour-page_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.single-tour-page_about_tour {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.single-tour-page_title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* .single-tour-page_about {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+} */
+.single-tour-page_about_tour_single {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.single-tour-page_single_span {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.single-tour-page_single_data {
+  text-transform: capitalize;
+}
+
+/* single-tour-page_about_tour_guides_info */
+.single-tour-page-tour-description {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+}
+.single-tour-page_about_tour_single_avatar {
+  width: 30px !important;
+  height: 30px !important;
+  object-fit: cover;
+  object-position: top;
+}
+.single-tour-page_description_text {
+  text-align: center;
+  font-size: 1.5rem;
+}

@@ -1,19 +1,22 @@
 :root {
-  --main-color: #4dc9ea;
-  --secondary-color: #3999b3;
+  --main-color: #fff1ef;
+  --secondary-color: #bf417a;
   --plain-white: #fff;
   --plain-black: #000;
-  --text-yellow: #fde02f;
+  --text-yellow: #d86096;
 }
 
 /* GENERAL */
+
+.fullPage {
+  height: 93vh;
+}
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.fullPage {
-  height: 80vh;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;

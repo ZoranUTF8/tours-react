@@ -2,12 +2,15 @@
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/img/testimonials/testimonials-bg.jpg");
+  background-image: url("https://images.unsplash.com/photo-1594485770492-f1b67aca488d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjMyfHxqYXBhbiUyMGt5b3RvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60");
   background-size: cover;
-  color: var(--plain-white);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: var(--text-yellow);
+
+  font-family: "Satisfy", cursive;
 }
 
 .testimonials-container_ceoImage {
@@ -15,4 +18,9 @@
   height: 100px;
   object-fit: cover;
   /* border-radius: 50px; */
+}
+.testimonials-container h3 {
+  line-height: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
 }

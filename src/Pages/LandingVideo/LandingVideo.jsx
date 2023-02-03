@@ -1,14 +1,14 @@
 import "./landingVideo.css";
-import videoBg from "../../assets/video/backgroundVideo.mp4";
+import videoBg from "../../assets/video/backgroundVideo.webm";
 
 const LandingVideo = () => {
   return (
       <div className="video-background-container">
         <div className="overlay"></div>
-        <video src={videoBg} autoPlay loop muted />
+        <video src={videoBg} autoPlay loop muted/>
         <div className="content">
           <h1>
-            From city breaks to remote wilderness, let us show you the world in
+            Let us show you Japan in
             all its beauty.
           </h1>
         </div>

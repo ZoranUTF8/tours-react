@@ -1,10 +1,10 @@
 import NotFound from "../../assets/img/NotFound.svg";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import "./error.css";
+// import "./error.css";
 const Error = () => {
   return (
-    <Container className="text-center fullPage d-flex justify-content-center align-items-center">
+    <Container className="fullPage error-container text-center d-flex justify-content-center align-items-center ">
       <Row>
         <Col xs="12" md="6">
           <Image fluid={true} src={NotFound} alt="404 page" />

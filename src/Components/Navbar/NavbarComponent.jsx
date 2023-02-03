@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import Logo from "../../assets/img/logo.png";
+import { useSelector, useDispatch } from "react-redux";
 import {
   Navbar,
   Container,
@@ -9,59 +11,156 @@ import {
   Offcanvas,
   Image,
 } from "react-bootstrap";
+import { logoutCurrentUser } from "../../features/User/userSlice";
 
 const NavbarComponent = () => {
-  const [user, setUser] = useState(false);
+  const { user } = useSelector((store) => store.user);
+  const dispatch = useDispatch();
   return (
     <>
       {["md"].map((expand) => (
-        <Navbar key={expand} variant="dark" className="navbar sticky-top shadow-md" expand={expand}>
+        <Navbar
+          key={expand}
+          variant="dark"
+          className="navbar sticky-top shadow-md"
+          expand={expand}
+        >
           <Container>
-            <Navbar.Brand href="/landing">
-              {" "}
-              <Image
-                src={Logo}
-                width={50}
-                height={50}
-                alt="main logo image"
-                roundedCircle
-              />{" "}
-              <p className="navbar-title navbar-text"> GoTrip</p>
-            </Navbar.Brand>
+            <Link to="/landing">
+              <Navbar.Brand>
+                <Image
+                  className="logo"
+                  src={Logo}
+                  width={50}
+                  height={50}
+                  alt="main logo image"
+                  roundedCircle
+                />
+                <p className="navbar-title navbar-text"> GoJapan</p>
+              </Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              className="navbarOffCanvas"
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  GoTrip
+                  GoJapan
                 </Offcanvas.Title>
               </Offcanvas.Header>
+
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#">Tours</Nav.Link>
-                  <Nav.Link href="#">Destinations</Nav.Link>
-                  <Nav.Link href="#">About Us</Nav.Link>
-                  <Nav.Link href="#">Contact Us</Nav.Link>
-                  <NavDropdown
-                    title={user ? "Options" : "Account"}
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#action4">
-                      {user ? "Me" : "Register"}
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
-                      {user ? "Options" : "Login"}
-                    </NavDropdown.Item>
-                    {user && (
-                      <NavDropdown.Item href="#action5">
-                        <NavDropdown.Divider />
-                        Logout
-                      </NavDropdown.Item>
-                    )}
-                  </NavDropdown>
+                <Nav className="main-nav">
+                  {user ? (
+                    <>
+                      <NavLink
+                        to="/alltours"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        Tours
+                      </NavLink>
+                      <NavLink
+                        to="/aboutus"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        About Us
+                      </NavLink>
+                      <NavLink
+                        to="/contactus"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        Contact Us
+                      </NavLink>
+                    </>
+                  ) : (
+                    <>
+                      <NavLink
+                        to="/aboutus"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        About Us
+                      </NavLink>
+                      <NavLink
+                        to="/contactus"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        ContactUs
+                      </NavLink>
+                    </>
+                  )}
+                  {user ? (
+                    <>
+                      <NavDropdown
+                        title="Options"
+                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                        className="dropdownNav"
+                      >
+                        <NavDropdown.Item href="#">
+                          <NavLink
+                            to={user ? "dashboard/me" : "/register"}
+                            className="nav_link"
+                          >
+                            Me
+                          </NavLink>
+                        </NavDropdown.Item>
+                        <NavDropdown.Item>
+                          <NavLink
+                            to={user ? "dashboard/me" : "/register"}
+                            className="nav_link"
+                          >
+                            Settings
+                          </NavLink>
+                        </NavDropdown.Item>
+
+                        <NavDropdown.Item
+                          onClick={() =>
+                            dispatch(logoutCurrentUser("Logging you out..."))
+                          }
+                          className="nav_link"
+                        >
+                          <NavDropdown.Divider />
+                          Logout
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    </>
+                  ) : (
+                    <>
+                      <NavLink
+                        to="/register"
+                        className={({ isActive }) =>
+                          isActive
+                            ? "activeLink nav_link"
+                            : "notActive nav_link"
+                        }
+                      >
+                        Register/Login
+                      </NavLink>
+                    </>
+                  )}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

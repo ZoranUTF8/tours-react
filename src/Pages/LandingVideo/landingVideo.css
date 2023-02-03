@@ -1,30 +1,34 @@
 .video-background-container {
   width: 100%;
-  height: 70vh;
+  min-height: 80vh;
+  object-fit: contain;
   position: relative;
 }
 
 video {
   width: 100%;
-  height: 100%;
+  min-height: 80vh;
   object-fit: cover;
   z-index: -1;
 }
 
 .content {
+  font-family: "Satisfy", cursive;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   display: flex;
-  font-size: 1.2rem;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--plain-white);
+  color: var(--text-yellow);
 }
-.content h1{
+.content h1 {
   line-height: 5rem;
+  font-size: 5rem;
+  font-weight: 400;
 }
 
 .overlay {

@@ -17,17 +17,27 @@
   justify-content: space-around;
 }
 
-.about-us_text-button {
+.about-us_text-link {
+  padding: 10px;
+  border-radius: 10px;
   background-color: var(--main-color);
-  border: none;
+  color: var(--secondary-color);
 }
-.about-us_text-button:hover {
+.about-us_text-link:hover {
+  color: var(--main-color);
   background-color: var(--secondary-color);
 }
-.about-us_text-link {
-  color: var(--plain-white);
+
+.about-us_text_desc {
+  font-size: 1.2rem;
 }
 
+.section-title {
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
 /* Screen size */
 @media screen and (max-width: 768px) {
   .about-us_text {
