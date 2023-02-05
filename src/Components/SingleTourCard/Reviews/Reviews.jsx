@@ -24,9 +24,9 @@ const Reviews = () => {
           </p>
         </div>
       </div>
-      {/* {reviews.map((review) => (
+      {reviews.map((review) => (
         <Review ReviewData={review} key={review.id} />
-      ))} */}
+      ))}
     </>
   );
 };

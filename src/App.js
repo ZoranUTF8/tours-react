@@ -1,7 +1,8 @@
-import "./App.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
 import "react-toastify/dist/ReactToastify.css";
+
+import "./App.css";
 
 import { Footer, SingleTourCard } from "./Components";
 import { Routes, Route } from "react-router-dom";

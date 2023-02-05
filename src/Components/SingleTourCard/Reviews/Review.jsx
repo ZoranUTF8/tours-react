@@ -23,8 +23,12 @@ const Review = ({
             : reviewText}
         </Card.Text>
         <Card.Text className="text-muted">
-          {[0, 1, 2, 3, 4].map((star) => {
-            return rating > star ? <AiFillStar /> : <AiOutlineStar />;
+          {[0, 1, 2, 3, 4].map((star, indx) => {
+            return rating > star ? (
+              <AiFillStar key={indx} />
+            ) : (
+              <AiOutlineStar key={indx} />
+            );
           })}
         </Card.Text>
       </Card.Body>

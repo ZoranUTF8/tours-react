@@ -34,7 +34,7 @@
 /* top right */
 .single-tour-page_top_right-image {
   max-width: 80% !important;
-  min-height: 100% !important;
+  max-height: 700px !important;
   border-radius: 0px 200px 0px 200px;
   -webkit-border-radius: 0px 200px 0px 200px;
   -moz-border-radius: 0px 200px 0px 200px;
@@ -101,4 +101,10 @@
 .single-tour-page_description_text {
   text-align: center;
   font-size: 1.5rem;
+}
+
+/* MAPBOX */
+.single-tour-page-left-section {
+  /* box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; */
 }

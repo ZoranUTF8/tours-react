@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./singleTourCard.css";
+import { Link } from "react-router-dom";
 // REACT ICONS
 import { GiDuration } from "react-icons/gi";
 import { MdOutlineLocationOn } from "react-icons/md";
@@ -15,6 +16,7 @@ import { getSingleTour } from "../../features/Tour/singleTourSlice";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import CarouselCustom from "./Carousel/CarouselCustom";
 import Reviews from "./Reviews/Reviews";
+import MapBox from "./MapBox/MapBox";
 
 const SingleTourCard = () => {
   const { slug } = useParams();
@@ -122,7 +124,10 @@ const SingleTourCard = () => {
             <div className="single-tour-page_container">
               {tour?.guides.map((guide) => {
                 return (
-                  <p className="single-tour-page_about_tour_single">
+                  <p
+                    className="single-tour-page_about_tour_single"
+                    key={guide._id}
+                  >
                     <Image
                       fluid
                       roundedCircle
@@ -165,6 +170,21 @@ const SingleTourCard = () => {
       <Row className="single-tour-page-reviews">
         <Col className="p-3 d-flex align-items-center justify-content-center flex-wrap">
           <Reviews />
+        </Col>
+      </Row>
+      <Row>
+        <Col lg={6} xs={12} className="p-3 single-tour-page-left-section">
+          <h1>Left side</h1>
+        </Col>
+        <Col
+          lg={6}
+          xs={12}
+          className="p-5 single-tour-page_about_and_facts_container"
+        >
+          <MapBox
+            startLocation={tour.startLocation}
+            tourLocations={tour.locations}
+          />
         </Col>
       </Row>
     </Container>
