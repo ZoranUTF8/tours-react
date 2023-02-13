@@ -20,7 +20,8 @@ const MapBox = ({ startLocation, tourLocations }) => {
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/outdoors-v12",
       center: [startLocationLng, startLocationLat],
-      zoom: 12,
+      zoom: 10,
+      scrollZoom: false,
     });
 
     map.current.addControl(new mapboxgl.NavigationControl(), "bottom-right");

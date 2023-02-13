@@ -1,0 +1,23 @@
+.profile-nav_top {
+  max-height: 50%;
+  font-size: 1.2rem;
+  color: var(--text-yellow) !important;
+}
+
+.profile-nav_top a {
+  min-width: 100%;
+  text-decoration: none;
+  color: var(--text-yellow) !important;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile-nav_top a:hover {
+  color: var(--secondary-color) !important;
+}
+
+.profile-nav_top_divider {
+  margin-left: 10%;
+  max-width: 80% !important;
+  border: 2px solid var(--text-yellow);
+}

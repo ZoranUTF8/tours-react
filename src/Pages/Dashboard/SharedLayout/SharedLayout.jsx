@@ -7,7 +7,7 @@ const SharedLayout = () => {
     <main>
     <Container fluid >
       <Row>
-        <Col md="12" className="p-2 fullPage">
+        <Col className="fullPage">
           <Outlet />
         </Col>
       </Row>

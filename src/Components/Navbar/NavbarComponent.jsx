@@ -119,32 +119,32 @@ const NavbarComponent = () => {
                         id={`offcanvasNavbarDropdown-expand-${expand}`}
                         className="dropdownNav"
                       >
-                        <NavDropdown.Item href="#">
-                          <NavLink
-                            to={user ? "dashboard/me" : "/register"}
-                            className="nav_link"
-                          >
-                            Me
-                          </NavLink>
-                        </NavDropdown.Item>
-                        <NavDropdown.Item>
-                          <NavLink
-                            to={user ? "dashboard/me" : "/register"}
-                            className="nav_link"
-                          >
-                            Settings
-                          </NavLink>
-                        </NavDropdown.Item>
+                        <NavLink
+                          to={user ? "dashboard/me" : "/register"}
+                          className={({ isActive }) =>
+                            isActive
+                              ? "activeLink nav_link"
+                              : "notActive nav_link"
+                          }
+                        >
+                          Me
+                        </NavLink>
 
-                        <NavDropdown.Item
+                        <NavDropdown.Divider />
+
+                        <NavLink
+                          to={user ? "dashboard/me" : "/register"}
+                          className={({ isActive }) =>
+                            isActive
+                              ? "activeLink nav_link"
+                              : "notActive nav_link"
+                          }
                           onClick={() =>
                             dispatch(logoutCurrentUser("Logging you out..."))
                           }
-                          className="nav_link"
                         >
-                          <NavDropdown.Divider />
                           Logout
-                        </NavDropdown.Item>
+                        </NavLink>
                       </NavDropdown>
                     </>
                   ) : (

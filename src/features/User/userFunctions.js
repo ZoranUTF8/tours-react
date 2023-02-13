@@ -17,4 +17,3 @@ export const loginUserFunc = async (user, thunkApi) => {
     return thunkApi.rejectWithValue(error.response.data.msg);
   }
 };
-

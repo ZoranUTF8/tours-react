@@ -17,6 +17,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import CarouselCustom from "./Carousel/CarouselCustom";
 import Reviews from "./Reviews/Reviews";
 import MapBox from "./MapBox/MapBox";
+import Tourstops from "./TourStops/Tourstops";
 
 const SingleTourCard = () => {
   const { slug } = useParams();
@@ -173,8 +174,11 @@ const SingleTourCard = () => {
         </Col>
       </Row>
       <Row>
-        <Col lg={6} xs={12} className="p-3 single-tour-page-left-section">
-          <h1>Left side</h1>
+        <Col lg={6} xs={12} className="p-5 single-tour-page-left-section">
+          <Tourstops
+            startLocation={tour.startLocation}
+            tourLocations={tour.locations}
+          />
         </Col>
         <Col
           lg={6}

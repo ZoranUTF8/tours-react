@@ -9,7 +9,8 @@
 /* GENERAL */
 
 .fullPage {
-  height: 93vh;
+  min-height: 93vh;
+  padding: 0;
 }
 .App {
   min-height: 100vh;

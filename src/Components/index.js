@@ -4,4 +4,13 @@ import Loading from "./Loading/Loading";
 import TourCard from "./TourCard/TourCard";
 import Register from "./Register/Register";
 import SingleTourCard from "./SingleTourCard/SingleTourCard";
-export { NavbarComponent, Footer, Loading, TourCard, Register, SingleTourCard };
+import Profile from "./DashboardComponents/Profile/Profile";
+export {
+  NavbarComponent,
+  Footer,
+  Loading,
+  TourCard,
+  Register,
+  SingleTourCard,
+  Profile,
+};

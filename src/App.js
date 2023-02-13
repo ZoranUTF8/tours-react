@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent />
+      
       <Routes>
         {/* PUBLIC */}
         <Route path="/landing" element={<Landing />} />

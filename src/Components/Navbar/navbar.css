@@ -56,19 +56,18 @@ Nav a:hover {
   background-color: var(--main-color);
   font-size: 1.2rem;
 }
-.dropdownNav {
-}
 
 .dropdownNav a {
-  color: var(--plain-white);
+  color: var(--text-yellow);
 }
 .dropdownNav a:hover {
-  color: var(--text-yellow) !important;
+  color: var(--secondary-color) !important;
   text-decoration: none !important;
 }
 .dropdown-menu.show {
   background-color: var(--main-color);
   border: 1px solid var(--plain-white);
+  padding: 20px;
 }
 .navbarOffCanvas a:hover {
   color: var(--text-yellow);

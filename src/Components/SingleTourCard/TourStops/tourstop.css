@@ -1,0 +1,20 @@
+.tourstop-container {
+  height: 500px;
+  max-height: 600px;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #8dcbe6;
+}
+
+.tourstop_title {
+  color: var(--text-yellow);
+}
+
+.tourstop_stop a {
+  text-decoration: none;
+}
+
+.tourstop_stop a:hover {
+  cursor: help;
+  text-decoration: underline;
+}
