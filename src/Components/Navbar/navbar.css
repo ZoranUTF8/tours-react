@@ -1,5 +1,6 @@
 .navbar {
-  background-color: var(--main-color);
+  background-image: url("../../assets/img/sharedDashboard/leftNavBackground/leftNavBack.svg");
+  background-size: cover;
   font-size: 1.2rem;
   position: sticky;
 }
@@ -58,7 +59,7 @@ Nav a:hover {
 }
 
 .dropdownNav a {
-  color: var(--text-yellow);
+  color: var(--text-yellow) !important;
 }
 .dropdownNav a:hover {
   color: var(--secondary-color) !important;

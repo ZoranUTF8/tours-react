@@ -5,13 +5,13 @@ import "./shared-layout.css";
 const SharedLayout = () => {
   return (
     <main>
-    <Container fluid >
-      <Row>
-        <Col className="fullPage">
-          <Outlet />
-        </Col>
-      </Row>
-    </Container>
+      <Container fluid>
+        <Row>
+          <Col className="fullPage">
+            <Outlet />
+          </Col>
+        </Row>
+      </Container>
     </main>
   );
 };

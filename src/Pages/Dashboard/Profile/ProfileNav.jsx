@@ -20,12 +20,12 @@ const ProfileNav = () => {
         className="profile-nav_top d-flex p-4 justify-content-center "
       >
         <div>
-          <Link>
+          <Link to={"settings"}>
             <AiTwotoneSetting /> Settings
           </Link>
         </div>
         <div>
-          <Link>
+          <Link to={"mybookings"}>
             <RiSuitcaseFill />
             My Bookings
           </Link>
@@ -45,7 +45,7 @@ const ProfileNav = () => {
       </Stack>
 
       <hr className="profile-nav_top_divider" />
-      {role !== "admin" && (
+      {role === "admin" && (
         <Stack
           gap={2}
           className="profile-nav_top d-flex p-4 justify-content-center"

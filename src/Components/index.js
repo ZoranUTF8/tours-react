@@ -4,7 +4,7 @@ import Loading from "./Loading/Loading";
 import TourCard from "./TourCard/TourCard";
 import Register from "./Register/Register";
 import SingleTourCard from "./SingleTourCard/SingleTourCard";
-import Profile from "./DashboardComponents/Profile/Profile";
+import AccountSettings from "./DashboardComponents/AccountSettings/AccountSettings";
 export {
   NavbarComponent,
   Footer,
@@ -12,5 +12,5 @@ export {
   TourCard,
   Register,
   SingleTourCard,
-  Profile,
+  AccountSettings,
 };

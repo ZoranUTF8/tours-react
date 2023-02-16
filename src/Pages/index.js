@@ -9,7 +9,14 @@ import Hero from "./Hero/Hero";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 import AboutUsPage from "./AboutUs/AboutUsPage";
 import ContactUs from "./ContactUs/ContactUs";
-
+import Settings from "./Dashboard/Settings/Settings";
+import MyBookings from "./Dashboard/MyBookings/MyBookings";
+import MyReviews from "./Dashboard/MyReviews/MyReviews";
+import GlobalStats from "./Dashboard/GlobalStats/GlobalStats";
+import AllTours from "./Dashboard/AllTours/AllTours";
+import AddTour from "./Dashboard/AddTour/AddTour";
+import SharedLayout from "./Dashboard/SharedLayout/SharedLayout";
+import SharedDashboard from "./Dashboard/Profile/SharedDashboard";
 export {
   Error,
   Landing,
@@ -21,6 +28,13 @@ export {
   Hero,
   ProtectedRoute,
   AboutUsPage,
-  ContactUs
+  ContactUs,
+  Settings,
+  MyBookings,
+  MyReviews,
+  GlobalStats,
+  AllTours,
+  AddTour,
+  SharedLayout,
+  SharedDashboard,
 };
-

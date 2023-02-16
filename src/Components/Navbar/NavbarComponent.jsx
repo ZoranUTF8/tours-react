@@ -22,7 +22,7 @@ const NavbarComponent = () => {
         <Navbar
           key={expand}
           variant="dark"
-          className="navbar sticky-top shadow-md"
+          className="navbar sticky-top"
           expand={expand}
         >
           <Container>

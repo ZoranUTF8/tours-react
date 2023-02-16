@@ -1,0 +1,51 @@
+.account-settings-container {
+  min-height: 500px;
+  min-width: 100%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.account-settings_title {
+  /* Create a linear gradient */
+  background: linear-gradient(to right, #fff1ef, #d86096);
+  /* Set the background-clip property to text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.account-settings_input {
+  min-width: 100%;
+  display: flex;
+  gap: 5;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-settings_input_form {
+  min-width: 50%;
+}
+
+.input_label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-self: flex-start;
+}
+.input_field {
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(235, 234, 234);
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 1000px) {
+  .account-settings_input {
+    flex-direction: column;
+  }
+}

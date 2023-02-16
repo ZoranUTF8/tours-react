@@ -4,7 +4,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 
-import { Footer, SingleTourCard } from "./Components";
+import {
+  Footer,
+  SingleTourCard,
+  Register,
+  NavbarComponent,
+} from "./Components";
 import { Routes, Route } from "react-router-dom";
 import {
   Error,
@@ -12,29 +17,29 @@ import {
   ProtectedRoute,
   AboutUsPage,
   ContactUs,
-} from "./Pages";
-import { Register, NavbarComponent } from "./Components";
-import { ToastContainer } from "react-toastify";
-import {
-  AddTour,
-  AllTours,
+  Settings,
+  MyBookings,
+  MyReviews,
   GlobalStats,
-  Profile,
+  AllTours,
+  AddTour,
   SharedLayout,
-} from "./Pages/Dashboard";
+  SharedDashboard,
+} from "./Pages";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <div className="App">
       <NavbarComponent />
-      
+
       <Routes>
         {/* PUBLIC */}
+        <Route path="/" element={<Landing />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/register" element={<Register />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="contactus" element={<ContactUs />} />
-
         <Route path="tour/:slug" element={<SingleTourCard />} />
         {/* PROTECTED  */}
         <Route
@@ -45,12 +50,17 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<GlobalStats />} />
           <Route path="alltours" element={<AllTours />} />
           <Route path="addtour" element={<AddTour />} />
-          <Route path="me" element={<Profile />} />
+          {/* Personal dashboard */}
+          <Route path="me" element={<SharedDashboard />}>
+            <Route index element={<GlobalStats />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="mybookings" element={<MyBookings />} />
+            <Route path="myreviews" element={<MyReviews />} />
+          </Route>
+          {/* End Personal dashboard */}
         </Route>
-
         {/* Not found route */}
         <Route path="*" element={<Error />} />
       </Routes>

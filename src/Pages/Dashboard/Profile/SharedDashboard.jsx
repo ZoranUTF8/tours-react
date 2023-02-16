@@ -1,8 +1,8 @@
-import "./profile.css";
-import { Profile as ProfileComponent } from "../../../Components";
+import "./SharedDashboard.css";
+import { Outlet } from "react-router-dom";
 import ProfileNav from "./ProfileNav";
 
-const Profile = () => {
+const SharedDashboard = () => {
   return (
     <div className="profile-container">
       <div className="profile-container_left">
@@ -10,10 +10,10 @@ const Profile = () => {
       </div>
       <hr className="profile-container_divider" />
       <div className="profile-container_right">
-        <ProfileComponent />
+        <Outlet />
       </div>
     </div>
   );
 };
 
-export default Profile;
+export default SharedDashboard;
