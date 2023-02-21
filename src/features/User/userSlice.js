@@ -4,15 +4,20 @@ import {
   get_user_from_local_storage,
   add_user_to_local_storage,
   remove_user_from_local_storage,
+  get_token_from_local_storage,
 } from "../../utils/local_storage/localStorageOperations";
 //? Slice functions
-import { registerUserFunc, loginUserFunc } from "./userFunctions";
+import {
+  registerUserFunc,
+  loginUserFunc,
+  updateUserFunc,
+} from "./userFunctions";
 
 //? When app loads we check if there is user in local storage, in case the user reloads the page
 const initialState = {
   user: get_user_from_local_storage(),
   isLoading: false,
-  token: null,
+  token: get_token_from_local_storage(),
 };
 export const registerUser = createAsyncThunk(
   "user/registerUser",
@@ -25,6 +30,13 @@ export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (user, thunkAPI) => {
     return loginUserFunc(user, thunkAPI);
+  }
+);
+
+export const updateUser = createAsyncThunk(
+  "user/updateUser",
+  async (user, thunkAPI) => {
+    return updateUserFunc(user, thunkAPI);
   }
 );
 
@@ -57,11 +69,12 @@ const userSlice = createSlice({
     [registerUser.pending]: (state) => {
       state.isLoading = true;
     },
+    // ! fix
     [registerUser.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
       state.user = payload.data;
       state.token = payload.token;
-      add_user_to_local_storage(payload.data);
+      add_user_to_local_storage(payload.data, payload.token);
       toast.success(`Hello there ${payload.data.name}`);
     },
     [registerUser.rejected]: (state, { payload }) => {
@@ -75,12 +88,24 @@ const userSlice = createSlice({
       state.user = payload.data;
       state.token = payload.token;
       state.isLoading = false;
-      add_user_to_local_storage(payload.data);
+      add_user_to_local_storage(payload.data, payload.token);
       toast.success(`Welcome back ${payload.data.name}`);
     },
     [loginUser.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
+    },
+    [updateUser.pending]: (state, { payload }) => {
+      state.isLoading = true;
+    },
+    [updateUser.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      toast.error(payload);
+    },
+    [updateUser.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      console.log("PAYLOAD IN USER SLICE IS FULLFILED", payload);
+      toast.success("User has been successfully updated.");
     },
   },
 });

@@ -2,10 +2,11 @@ import { Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const ProtectedRoute = ({ children }) => {
-  const { user } = useSelector((store) => store.user);
+  const { user, token } = useSelector((store) => store.user);
 
-  //? If no user than navigate to landing
-  if (!user) {
+  //? If no user than navigate to landing 
+  //! LOGOUT USER ?
+  if (!user || !token) {
     return <Navigate to="/landing" />;
   }
 

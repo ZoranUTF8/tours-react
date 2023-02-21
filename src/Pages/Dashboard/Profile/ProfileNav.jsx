@@ -21,7 +21,7 @@ const ProfileNav = () => {
       >
         <div>
           <Link to={"settings"}>
-            <AiTwotoneSetting /> Settings
+            <AiTwotoneSetting /> My profile
           </Link>
         </div>
         <div>

@@ -1,0 +1,22 @@
+.avatar_container_image {
+  max-width: 200px;
+  max-height: 300px;
+  
+}
+.avatar_container_image_button > h6 {
+  font-size: 1.2rem;
+  color: var(--text-yellow);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.avatar_container_image_button > h6:hover {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+}
+@media (max-width: 1000px) {
+  .user_avatar_container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
