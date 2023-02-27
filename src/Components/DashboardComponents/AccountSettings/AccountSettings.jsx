@@ -15,6 +15,7 @@ const AccountSettings = () => {
     name: user?.name || "",
     email: user?.email || "",
     avatar: user?.avatar || "",
+    userId: user?._id || null,
   });
 
   const handleChange = (event) => {

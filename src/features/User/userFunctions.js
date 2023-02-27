@@ -22,7 +22,7 @@ export const loginUserFunc = async (user, thunkApi) => {
 export const updateUserFunc = async (user, thunkApi) => {
   try {
     const response = await customFetch.patch(
-      `users/:id`,
+      `users/${user.userId}`,
       user,
       authHeader(thunkApi)
     );

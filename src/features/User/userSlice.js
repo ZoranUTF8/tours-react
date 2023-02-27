@@ -104,7 +104,10 @@ const userSlice = createSlice({
     },
     [updateUser.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
-      console.log("PAYLOAD IN USER SLICE IS FULLFILED", payload);
+      state.user = payload.data;
+
+      remove_user_from_local_storage();
+      add_user_to_local_storage(payload.data, state.token);
       toast.success("User has been successfully updated.");
     },
   },

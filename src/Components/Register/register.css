@@ -39,15 +39,15 @@
 }
 .register-form_toggle_member_btn:hover {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--text-yellow);
 }
 
 .register-form_login_btn {
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   border: none;
 }
 .register-form_login_btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--text-yellow);
 }
 
 @media screen and (max-width: 767px) {
