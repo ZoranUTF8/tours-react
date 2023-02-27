@@ -57,6 +57,7 @@ const AccountSettings = () => {
               className="input_field"
               minLength={3}
               maxLength={30}
+              required
             />
 
             <label className="input_label text-muted" htmlFor="name">
@@ -68,6 +69,7 @@ const AccountSettings = () => {
               value={updatedUser.email}
               onChange={handleChange}
               className="input_field"
+              required
             />
             <Button
               variant="outline-info"

@@ -5,6 +5,7 @@ import TourCard from "./TourCard/TourCard";
 import Register from "./Register/Register";
 import SingleTourCard from "./SingleTourCard/SingleTourCard";
 import AccountSettings from "./DashboardComponents/AccountSettings/AccountSettings";
+import AccountPassword from "./DashboardComponents/AccountPassword/AccountPassword";
 export {
   NavbarComponent,
   Footer,
@@ -13,4 +14,5 @@ export {
   Register,
   SingleTourCard,
   AccountSettings,
+  AccountPassword
 };
