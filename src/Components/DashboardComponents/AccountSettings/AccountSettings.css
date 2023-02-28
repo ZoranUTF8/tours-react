@@ -40,7 +40,7 @@
   background-color: rgb(235, 234, 234);
 }
 
-input:focus {
+.input_field:focus {
   outline: none;
 }
 
