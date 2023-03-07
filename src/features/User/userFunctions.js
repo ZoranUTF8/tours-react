@@ -31,3 +31,16 @@ export const updateUserFunc = async (user, thunkApi) => {
     return thunkApi.rejectWithValue(error.response.data.msg);
   }
 };
+
+export const updateUserPassword = async (updatedPassword, thunkApi) => {
+  try {
+    const response = await customFetch.post(
+      `auth/updatePassword`,
+      updatedPassword,
+      authHeader(thunkApi)
+    );
+    return response.data;
+  } catch (error) {
+    return thunkApi.rejectWithValue(error.response.data.msg);
+  }
+};

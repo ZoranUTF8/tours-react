@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Stack } from "react-bootstrap";
 import AccountAvatar from "./AccountAvatar/AccountAvatar";
 import { updateUser } from "../../../features/User/userSlice";
+import Spinner from "react-bootstrap/Spinner";
 
 const AccountSettings = () => {
   //? Get user and loading from app store
@@ -24,8 +25,7 @@ const AccountSettings = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent the default form submission
-    console.log("Form submitted with value: ", { updatedUser });
+    event.preventDefault();
 
     dispatch(updateUser(updatedUser));
   };
@@ -76,7 +76,17 @@ const AccountSettings = () => {
               type="submit"
               disabled={disabledSubmitBtn()}
             >
-              {isLoading ? "Loading…" : "Update profile"}
+              {isLoading ? (
+                <Spinner
+                  as="span"
+                  animation="border"
+                  size="sm"
+                  role="status"
+                  aria-hidden="true"
+                />
+              ) : (
+                "Update profile"
+              )}
             </Button>
           </Stack>
         </form>

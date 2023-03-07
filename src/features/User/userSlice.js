@@ -11,6 +11,7 @@ import {
   registerUserFunc,
   loginUserFunc,
   updateUserFunc,
+  updateUserPassword,
 } from "./userFunctions";
 
 //? When app loads we check if there is user in local storage, in case the user reloads the page
@@ -19,6 +20,7 @@ const initialState = {
   isLoading: false,
   token: get_token_from_local_storage(),
 };
+
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (user, thunkAPI) => {
@@ -37,6 +39,13 @@ export const updateUser = createAsyncThunk(
   "user/updateUser",
   async (user, thunkAPI) => {
     return updateUserFunc(user, thunkAPI);
+  }
+);
+
+export const updatePassword = createAsyncThunk(
+  "user/updatePassword",
+  async (updatedPasswordData, thunkAPI) => {
+    return updateUserPassword(updatedPasswordData, thunkAPI);
   }
 );
 
@@ -109,6 +118,22 @@ const userSlice = createSlice({
       remove_user_from_local_storage();
       add_user_to_local_storage(payload.data, state.token);
       toast.success("User has been successfully updated.");
+    },
+    [updatePassword.pending]: (state, { payload }) => {
+      state.isLoading = true;
+    },
+    [updatePassword.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      toast.error(payload);
+    },
+    [updatePassword.fulfilled]: (state, { payload }) => {
+      state.isLoading = false;
+      state.user = payload.data;
+      state.token = payload.token;
+
+      remove_user_from_local_storage();
+      add_user_to_local_storage(payload.data, payload.token);
+      toast.success("Your password has been updated.");
     },
   },
 });
